@@ -1,0 +1,34 @@
+#background {
+    background-color: rgba(110, 3, 3, 0.958);
+}
+
+#table1 {
+    width: 200px;
+    height: 200px;
+}
+
+.text {
+    color: white;
+}
+
+#td1 {
+    padding: 10px;
+    background: top left url(img/box_tl.gif) no-repeat,
+        top right url(img/box_tr.gif) no-repeat,
+        bottom left url(img/box_bl.gif) no-repeat,
+        bottom right url(img/box_br.gif) no-repeat,
+        left url(img/box_l.gif) repeat-y,
+        right url(img/box_r.gif) repeat-y,
+        top url(img/box_t.gif) repeat-x,
+        bottom url(img/box_b.gif) repeat-x;
+}
+
+#more:hover {
+    color: green;
+    text-decoration: underline;
+}
+
+#more {
+    color: yellow;
+    text-align: right;
+}

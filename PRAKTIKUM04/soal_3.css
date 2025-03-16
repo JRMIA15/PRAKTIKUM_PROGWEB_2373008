@@ -1,0 +1,10 @@
+#table1 {
+    width: 150px;
+    height: 100px; 
+    background-color: rgba(106, 2, 2, 0.944);
+    border-collapse: collapse;
+}
+
+#td1{
+    background:url(img/top_left.gif) top left no-repeat, url(img/bottom_right.gif) bottom right no-repeat;
+}

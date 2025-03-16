@@ -1,0 +1,28 @@
+#table{
+    border-collapse: collapse;
+}
+.atas{
+    background-color: yellowgreen;
+    color: white;
+    border:1px solid #98bf21;
+    padding: 4px;
+}
+.bawah{
+    text-align: center;
+    background-color: yellowgreen;
+    color: white;
+    border:1px solid #98bf21;
+    padding: 4px;
+}
+
+.warna1{
+    background-color: lemonchiffon;
+    border:1px solid #98bf21;
+    padding: 4px;
+}
+
+.warna2{
+    background-color:honeydew;
+    border:1px solid #98bf21;
+    padding: 4px;
+}
