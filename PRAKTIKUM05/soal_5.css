@@ -1,0 +1,41 @@
+#navi li {
+    text-align: center;
+    float: left;
+    list-style: none;
+    width: 100;
+    height: 20;
+    border: dotted grey 2px;
+}
+
+#ul1 li{
+    margin: 3px;
+}
+
+#navi a {
+    text-decoration: none;
+    color: black;
+}
+
+#navi ul ul{
+    display: none;
+}
+
+#navi ul li:hover > ul{
+    display: block;
+    padding: 0;
+    position: relative;
+}
+
+#navi ul ul li {
+    left: -5;
+    float: none;
+    position: relative;
+}
+
+.list:hover{
+    background-color: black;  
+    color: white;
+}
+
+
+

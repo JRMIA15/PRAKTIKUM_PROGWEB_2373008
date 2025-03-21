@@ -1,0 +1,49 @@
+#div1 {
+    background-color: red;
+    width: 300px;
+    height: 30px;
+    color: red;
+}
+
+#div2 {
+    margin-top: 2;
+    float: left;
+    background-color: blue;
+    color: blue;
+    width: 60px;
+    height: 90px;
+
+}
+
+#div3 {
+    margin-top: 2;
+    margin-left: 2;
+    clear: right;
+    float: left;
+    background-color: green;
+    height: 125px;
+    width: 238px;
+    font-size: 7px;
+}
+
+#div4 {
+    background-color: yellow;
+    height: 50px;
+    width: 50px;
+    float: right;
+    margin-top: 2;
+    margin-right: 2;
+}
+
+#text {
+    text-indent: 22px;
+    margin-left: 2px;
+    float: left;
+    width: 180px;
+    height: 40px;
+}
+
+#text2 {
+    margin-left: 2px;
+    float: left;
+}

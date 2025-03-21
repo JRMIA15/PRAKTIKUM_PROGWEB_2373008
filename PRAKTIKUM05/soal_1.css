@@ -1,0 +1,62 @@
+.td1 {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+.bintang {
+    display: inline-block;
+    position: relative;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+a::before,
+a::after,
+a span::before,
+a span::after {
+    content: "";
+    position: absolute;
+    display: inline;
+    width: 30px;
+    height: 30px;
+    border: 5px solid #FF0000;
+}
+
+a::before {
+    top: -5;
+    left: -4.5;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+a::after {
+    top: -5;
+    right: -5;
+    border-left: 0;
+    border-bottom: 0;
+}
+
+a span::before {
+    bottom: -5;
+    left: -4.5;
+    border-right: 0;
+    border-top: 0;
+}
+
+a span::after {
+    top: 120;
+    right: -5;
+    border-left: 0;
+    border-top: 0;
+}
+
+a:hover::after,
+a:hover::before,
+a:hover span::after,
+a:hover span::before {
+    border-color: #ff00ff;
+}

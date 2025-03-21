@@ -1,0 +1,29 @@
+#red1{
+    position: absolute;
+    left: 195px;
+    z-index: 2;
+}
+
+#purple1{
+    position: absolute;
+    left: 130;
+    z-index: 3;
+}
+
+#red2{
+    position: absolute;
+    left: 70px;
+    z-index: 2;
+}
+
+#redhalf2{
+    position: absolute;
+    left: 70px;
+    z-index: 3;
+}
+
+#redhalf1{
+    position: absolute;
+    left: 195px;
+    z-index: 3;
+}

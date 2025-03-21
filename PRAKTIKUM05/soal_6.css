@@ -1,0 +1,15 @@
+#div1{
+    background-color: #aa0000;
+    height: 30px;
+    width: 130px;
+}
+#p1{
+    color: white;
+}
+#sub1{
+    color: black;
+}
+p{
+    padding: 3px;
+    text-align: center;
+}
