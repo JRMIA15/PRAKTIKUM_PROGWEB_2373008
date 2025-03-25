@@ -1,0 +1,62 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2373008 - Jeremia Dylan Utomo</title>
+
+    <script type="text/javascript">
+      function convert(event) {
+        event.preventDefault();
+
+        let input = document.getElementById("input_field").value;
+        let type = document.getElementById("opsi").value;
+        let result = document.getElementById("output");
+
+        if (type === "decimal-biner") {
+          let decimal = parseInt(input);
+          if (!isNaN(decimal) && decimal >= 0 && decimal <= 255) {
+            result.value = decimal.toString(2).padStart(8, "0");
+          } else {
+            result.value = "";
+            alert("Masukkan angka 0 sampai 255");
+          }
+        } else if (type === "biner-decimal") {
+          if (/^[01]{8}$/.test(input)) {
+            result.value = parseInt(input, 2);
+          } else {
+            result.value = "";
+            alert("Hanya angka 0 dan 1 yang diperbolehkan dalam biner");
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form name="form1" onsubmit="convert(event)">
+      <table border="1">
+        <tr>
+          <td>Input :</td>
+          <td><input type="text" id="input_field" maxlength="8" /></td>
+        </tr>
+        <tr>
+          <td>Output :</td>
+          <td><input type="number" id="output" readonly /></td>
+        </tr>
+        <tr style="text-align: center">
+          <td colspan="2">
+            <select name="" id="opsi">
+              <option value="decimal-biner">decimal-biner</option>
+              <option value="biner-decimal">biner-decimal</option>
+            </select>
+          </td>
+        </tr>
+        <tr style="text-align: center">
+          <td colspan="2">
+            <button type="submit">Proses</button>
+            <input type="reset" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

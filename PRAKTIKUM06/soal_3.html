@@ -1,0 +1,48 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2373008 - Jeremia Dylan Utomo</title>
+
+    <style>
+      .row {
+        display: flex;
+        justify-content: center;
+      }
+      .box {
+        width: 60px;
+        height: 80px;
+        background-color: orange;
+        border: 1px solid yellow;
+      }
+    </style>
+    <script>
+      function generate() {
+        let pyramidContainer = document.getElementById("pyramid");
+        pyramidContainer.innerHTML = "";
+        let tinggi = parseInt(document.getElementById("input1").value);
+        for (let i = 0; i < tinggi; i++) {
+          let baris = document.createElement("div");
+          baris.classList.add("row");
+
+          let banyak = 1 + i * 2;
+
+          for (let j = 0; j < banyak; j++) {
+            let box = document.createElement("div");
+            box.classList.add("box");
+            baris.appendChild(box);
+          }
+
+          pyramidContainer.appendChild(baris);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <span>Tinggi piramida : </span>
+    <input id="input1" type="number" /> <br />
+    <button onclick="generate()">Proses</button>
+
+    <div class="pyramid" id="pyramid"></div>
+  </body>
+</html>

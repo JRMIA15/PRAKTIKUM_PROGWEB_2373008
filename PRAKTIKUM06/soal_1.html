@@ -1,0 +1,82 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2373008 - Jeremia Dylan Utomo</title>
+
+    <style>
+      .table1 {
+        border: 2px black solid;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        font-size: 25px;
+      }
+    </style>
+
+    <script type="text/javascript">
+      var operator;
+      function opr(temp) {
+        operator = temp;
+      }
+
+      var op1;
+      var op2;
+
+      function result() {
+        op1 = parseInt(document.calc.input1.value);
+        op2 = parseInt(document.calc.input2.value);
+        var hasil1 = op1 + op2;
+        var hasil2 = op1 - op2;
+
+        cek_angka();
+
+        document.getElementById("td_atas_1").innerHTML = op1;
+        document.getElementById("td_bawah_1").innerHTML = op1;
+
+        document.getElementById("td_atas_3").innerHTML = op2;
+        document.getElementById("td_bawah_3").innerHTML = op2;
+
+        document.getElementById("td_atas_5").innerHTML = hasil1;
+        document.getElementById("td_bawah_5").innerHTML = hasil2;
+      }
+
+      function cek_angka() {
+        if (isNaN(op1) && isNaN(op2)) {
+          alert("Angka pertama dan kedua harus angka.");
+        } else if (isNaN(op1)) {
+          alert("Angka pertama bukan angka.");
+        } else if (isNaN(op2)) {
+          alert("Angka kedua harus angka.");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form name="calc">
+      <span>Angka Pertama : </span>
+      <input type="number" name="input1" /> <br />
+
+      <span>Angka Kedua : </span>
+      <input type="number" name="input2" /> <br />
+
+      <input type="button" value="Count" onclick="result()" /> <br />
+      <table id="table1">
+        <tr>
+          <td id="td_atas_1" class="table1"></td>
+          <td id="td_atas_2" class="table1">+</td>
+          <td id="td_atas_3" class="table1"></td>
+          <td id="td_atas_4" class="table1">=</td>
+          <td id="td_atas_5" class="table1"></td>
+        </tr>
+        <tr>
+          <td id="td_bawah_1" class="table1"></td>
+          <td id="td_bawah_2" class="table1">-</td>
+          <td id="td_bawah_3" class="table1"></td>
+          <td id="td_bawah_4" class="table1">=</td>
+          <td id="td_bawah_5" class="table1"></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
