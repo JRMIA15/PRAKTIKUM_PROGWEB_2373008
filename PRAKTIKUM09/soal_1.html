@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2373008 Jeremia Dylan Utomo</title>
+    <style>
+        .div1 {
+            width: 400px;
+        }
+        span {
+            font-weight: bold;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            box-sizing: border-box;
+        }
+        .counter {
+            text-align: right;
+            color: #666;
+        }
+        .label{
+            width: 90px;
+        }
+        .isi{
+            width: 310px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <table>
+            <tr>
+                <td class="label">
+                    <span>Judul&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span>
+                </td>
+                <td class="isi">
+                    <input type="text" style="width: 100%; padding: 8px; box-sizing: border-box;">
+                </td>
+            </tr>
+            <tr>
+                <td class="label">
+                    <span>Deskripsi&nbsp;&nbsp;:<span></span>
+                </td>
+                <td class="isi">
+                    <textarea onkeyup="onKeyPress(this)" onkeydown="cek_panjang(this)"></textarea>
+                    <div id="counter" class="counter">0/256</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function onKeyPress(panjang) {
+            var length = panjang.value;
+            document.getElementById("counter").innerHTML = length.length + "/256";
+        }
+        
+        function cek_panjang(panjang) {
+
+            if (panjang.value.length >= 256 && event.keyCode != 8 && event.keyCode != 46) {
+                event.preventDefault();
+            }
+        }
+    </script>
+</body>
+</html>
