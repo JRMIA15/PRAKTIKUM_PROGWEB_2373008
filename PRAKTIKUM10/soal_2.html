@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2373008 - Jeremia Dylan Utomo</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+      body {
+        margin: 20px;
+      }
+      .container {
+        width: 400px;
+      }
+      .row {
+        display: flex;
+        margin-bottom: 5px;
+        align-items: center;
+      }
+      .nama {
+        flex: 1;
+        padding: 5px;
+      }
+      .action {
+        width: 70px;
+        padding: 5px;
+      }
+      input {
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+      }
+      button {
+        width: 100%;
+        padding: 5px;
+        cursor: pointer;
+      }
+      .underline {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="nama">
+          <input type="text" id="input_nama" placeholder="Enter name" />
+        </div>
+        <div class="action"><button id="add_btn">Add</button></div>
+        <div class="action"><button id="search_btn">Search</button></div>
+      </div>
+      <div id="list_nama">
+        <div class="row">
+          <div class="nama">John Resig</div>
+        </div>
+        <div class="row">
+          <div class="nama">George Martin</div>
+        </div>
+        <div class="row">
+          <div class="nama">Malcom John Sinclair</div>
+        </div>
+        <div class="row">
+          <div class="nama">J. Ohn</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#add_btn").click(function () {
+          const nama = $("#input_nama").val().trim();
+          if (nama) {
+            $("#list_nama").append(
+              '<div class="row">' +
+                '<div class="nama">' +
+                nama +
+                "</div>" +
+                "</div>"
+            );
+            $("#input_nama").val("");
+          }
+        });
+
+        $("#search_btn").click(function () {
+          const term = $("#input_nama").val().trim();
+          $(".nama").removeClass("underline");
+          if (term) {
+            $(".nama").each(function () {
+              if ($(this).text().toLowerCase().includes(term.toLowerCase())) {
+                $(this).addClass("underline");
+              }
+            });
+          }
+        });
+
+        $("#input_nama").keypress(function (e) {
+          if (e.which === 13) {
+            $("#add_btn").click();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

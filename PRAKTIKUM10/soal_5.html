@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2373008 Jeremia Dylan Utomo</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+      input {
+        width: 40%;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      li {
+        padding: 5px 0;
+        list-style: none;
+      }
+      .merah {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="cari" placeholder="" />
+    <ul id="daftar">
+      <li>Sun Microsystem</li>
+      <li>Apache Software Foundation</li>
+      <li>Oracle Corporation</li>
+      <li>International Bussiness Machines</li>
+      <li>Microsoft Corporation</li>
+      <li>Apple Inc</li>
+      <li>Sap Ag</li>
+      <li>Accenture</li>
+      <li>Computer Sciences Corporation</li>
+      <li>Google</li>
+      <li>Softbank</li>
+      <li>Yahoo</li>
+    </ul>
+
+    <script>
+      $("#cari").on("input", function () {
+        const kata = $(this).val().toLowerCase();
+        $("#daftar li").each(function () {
+          $(this).toggleClass(
+            "merah",
+            kata.length > 0 && $(this).text().toLowerCase().includes(kata)
+          );
+        });
+      });
+    </script>
+  </body>
+</html>

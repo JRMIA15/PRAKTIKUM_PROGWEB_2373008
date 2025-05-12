@@ -1,0 +1,70 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2373008 - Jeremia Dylan Utomo</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: fit-content;
+      }
+      .button {
+        margin-bottom: 10px;
+      }
+      .box_container {
+        display: flex;
+      }
+      .box {
+        width: 40px;
+        height: 40px;
+        border: 2px blue solid;
+        background-color: white;
+        margin-right: 5px;
+      }
+      button {
+        padding: 5px 10px;
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="button">
+        <button id="change">Change colors</button>
+        <button id="reset">Reset</button>
+      </div>
+      <div class="box_container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </div>
+
+    <script>
+      $(function () {
+        $(".box").click(function () {
+          $(this).css("background-color", "red").attr("data-clicked", "true");
+        });
+
+        $("#change").click(function () {
+          $(".box").each(function () {
+            if ($(this).attr("data-clicked") === "true") return false;
+            $(this).css("background-color", "yellow");
+          });
+        });
+
+        $("#reset").click(function () {
+          $(".box").css("background-color", "white").removeAttr("data-clicked");
+        });
+      });
+    </script>
+  </body>
+</html>

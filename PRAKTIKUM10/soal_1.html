@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2373008 - Jeremia Dylan Utomo</title>
+    <style>
+      body {
+        padding: 20px;
+      }
+    
+      .menu_items {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .item_menu {
+        position: relative;
+        padding: 5px 10px;
+        margin-right: 2px;
+        background: #f335c3;
+
+        text-decoration: underline;
+      }
+      .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        list-style: none;
+        padding: 5px;
+        width: 150px;
+        border: 5px solid #f335c3;
+      }
+      .submenu li {
+        padding: 3px 5px;
+        text-decoration: underline;
+      }
+      * {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <ul class="menu_items">
+        <li class="item_menu">
+          Query
+          <ul class="submenu">
+            <li>Download</li>
+            <li>Documentation</li>
+            <li>Blog</li>
+          </ul>
+        </li>
+        <li class="item_menu">
+          Community
+          <ul class="submenu">
+            <li>Mailing List</li>
+            <li>Tutorials</li>
+            <li>Demos</li>
+            <li>Pblojns</li>
+          </ul>
+        </li>
+        <li class="item_menu">
+          Development
+          <ul class="submenu">
+            <li>Source Code</li>
+            <li>Bug Tracking</li>
+            <li>Recent Changes</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $(".item_menu").hover(
+          function () {
+            $(this).find(".submenu").show();
+          },
+          function () {
+            $(this).find(".submenu").hide();
+          }
+        );
+      });
+    </script>
+  </body>
+</html>
