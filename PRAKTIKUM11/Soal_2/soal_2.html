@@ -1,0 +1,83 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2373008 - Jeremia Dylan Utomo</title>
+  <script src="jquery-3.7.1.min.js"></script>
+  <style>
+    table {
+      width: 65%;
+      margin: 10px;
+    }
+
+    table,
+    tr,
+    td {
+      border: 1px solid rgb(0, 0, 0);
+    }
+
+    button {
+      margin: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      padding-top: 15px;
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <div>
+      <tr>
+        <td id="title">Title</td>
+      </tr>
+      <tr>
+        <td id="content">Content</td>
+      </tr>
+      <tr>
+        <td id="generator">Generator</td>
+      </tr>
+  </table>
+  <button type="button" id="look">Look</button>
+
+  <script>
+    $(document).ready(function () {
+      $("#look").click(function () {
+        $.getJSON("SIJson.txt")
+          .done(function (data) {
+            $("#title").html(
+              '<a href="' +
+              data.link +
+              '">' +
+              "<h2>" + data.title + "</h2>" +
+              "</a>"
+            );
+            let content = "";
+            data.items.forEach(function (item) {
+              content += `
+                            <a href="${item.link}" class="course-link">${item.title}</a>
+                            <div>By : ${item.author} / <i>${item.published}</i> </div> <br>
+                            <div>${item.description}</div><br>
+                            <div>Universitas : <a href="${item.universitas.m}">Click Here</a></div>
+                            <div>Tag(s): ${item.tags}</div><br>
+                        `;
+            });
+            $("#content").html(content);
+            $("#generator").text(data.generator);
+          })
+          .fail(function (jqxhr, textStatus, error) {
+            console.error("Error loading JSON data:", textStatus, error);
+            $("#content").html(
+              '<div style="color: red;">Error loading data.</div>'
+            );
+          });
+      });
+    });
+  </script>
+</body>
+
+</html>

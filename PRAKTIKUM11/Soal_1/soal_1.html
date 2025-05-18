@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2373008 - Jeremia Dylan Utomo</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+      h1 {
+        width: 65%;
+      }
+      #tabel {
+        width: 50%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        text-align: center;
+      }
+      #header_table {
+        background-color: black;
+        color: white;
+      }
+      td {
+        border: 1px black solid;
+      }
+      tr:nth-child(even) {
+        background-color: #ffffcc;
+      }
+      tr:nth-child(odd) {
+        background-color: #ccffaa;
+      }
+      .container {
+        width: 20%;
+        border: 1px black solid;
+        margin: 5px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Selamat! Berikut adalah Daftar Mahasiswa yang mendapat Nilai A Pemograman
+      Web SI Tahun Ajaran 2023/2024
+    </h1>
+
+    <div class="container">
+      <form id="opsi">
+        <input type="radio" name="kelas" value="all" /> All <br />
+        <input type="radio" name="kelas" value="A" /> Class A <br />
+        <input type="radio" name="kelas" value="B" /> Class B <br />
+        <button type="button" id="searchBtn" class="search_btn">Search</button>
+      </form>
+    </div>
+
+    <div id="hasil"></div>
+
+    <script src="soal_1.js"></script>
+  </body>
+</html>
