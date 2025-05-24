@@ -1,0 +1,108 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        #buton {
+            text-align: right;
+            margin: 10px;
+        }
+
+        tr,
+        td {
+            border: 1px solid black;
+        }
+
+        #thead {
+            font-size: 30px;
+        }
+
+        #table1 {
+            border: 1px solid black;
+            width: 320px;
+            border-collapse: collapse;
+            height: auto;
+        }
+
+        #tr1 {
+            background-color: rgb(163, 161, 161);
+        }
+
+        #table2 {
+            width: 320px;
+            height: auto;
+            border-collapse: collapse;
+        }
+    </style>
+    <title>2373008 Jeremia Dylan Utomo</title>
+</head>
+
+<body>
+    <form action="soal_1.php" method="post">
+        <table id="table1">
+            <tr id="tr1">
+                <th colspan="2" id="thead">Add Profile</th>
+            </tr>
+            <tr>
+                <td>
+                    <table id="table2">
+                        <tr>
+                            <td>
+                                <p>Name</p>
+                            </td>
+                            <td>
+                                <input type="text" name="nama">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Position</p>
+                            </td>
+                            <td>
+                                <select name="position" id="">
+                                    <optgroup label="Programmer">
+                                        <option value="Senior Programmer">Senior Programmer</option>
+                                        <option value="Junior Programmer">Junior Programmer</option>
+                                    </optgroup>
+                                    <optgroup label="System Analyst">
+                                        <option value="Senior Analyst">Senior Analyst</option>
+                                        <option value="Junior Analyst">Junior Analyst</option>
+                                    </optgroup>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Password</p>
+                            </td>
+                            <td>
+                                <input type="password" name="password" id="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Confirm Password</p>
+                            </td>
+                            <td>
+                                <input type="password" name="confirm" id="" />
+                            </td>
+                        </tr>
+                        <tr id="button_table">
+                            <td id="buton" colspan="2">
+                                <input type="reset" name="" id="" value="Reset" />
+                                <input type="submit" name="" id="" value="Save" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+<script>
+
+</script>
+
+</html>
